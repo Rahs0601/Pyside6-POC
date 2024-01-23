@@ -2,7 +2,7 @@ import sqlite3
 import pandas as pd
 
 # Connect to the SQLite database
-db_path = "D:\POC\Desktop APP\DB\DB_Sqlite_Raw_String.db"  # Replace with your SQLite database file path
+db_path = "DB\DB_Sqlite_Raw_String.db"  # Replace with your SQLite database file path
 conn = sqlite3.connect(db_path)
 
 # Query to fetch data from the table (replace 'your_table' with the actual table name)
