@@ -5,7 +5,6 @@ import paho.mqtt.client as mqtt
 # import pdfviewer as pdfviewer
 from PySide6.QtWidgets import QApplication
 from PySide6.QtCore import QUrl, QCoreApplication
-from MainApp.pdfviewer.main import PDFViewer
 # from PDFViewer import PDFViewer
 # from mainwindow import MainWindow
 # from pdfviewer import main as 
