@@ -49,6 +49,9 @@ border-radius:5px
 #frame_7{
 width:20px;
 }
+#frame_5{
+background-color:rgb(21, 11, 141);
+}
 #frame_9 QLabel{
 color:black;
 
