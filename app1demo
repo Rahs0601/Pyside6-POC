@@ -1,5 +1,4 @@
 from PySide6.QtWidgets import *
-from app1_MQTT import MQTT_Layout
 
 class MyWidget(QWidget):
     def __init__(self):
@@ -7,12 +6,6 @@ class MyWidget(QWidget):
 
         # Create a QVBoxLayout
         self.mainlayout = QGridLayout(self)
-
-        # Create the second widget (row) to fill the remaining space
-        self.remaining_space_widget = QHBoxLayout()
-        self.mainlayout.addLayout(self.remaining_space_widget,0,0)
-
-
 
         # Create the first widget (row) with a specific height
         self.horizontal_layout=QHBoxLayout()
@@ -22,9 +15,6 @@ class MyWidget(QWidget):
         self.btn_Graph = QPushButton("Graph and PieChart")
         self.btn_Sql = QPushButton("SQL")
 
-
-        self.btn_mqtt.clicked.connect(self.on_mqtt_clicked)
-
         self.horizontal_layout.addWidget(self.btn_mqtt)
         self.horizontal_layout.addWidget(self.btn_pdfview)
         self.horizontal_layout.addWidget(self.btn_Excelview)
@@ -33,18 +23,33 @@ class MyWidget(QWidget):
 
         self.mainlayout.addLayout(self.horizontal_layout,1,0)
 
+        # Connect each button to a slot
+        self.btn_mqtt.clicked.connect(self.on_mqtt_clicked)
+        self.btn_pdfview.clicked.connect(self.on_pdfview_clicked)
+        # ... do this for all your buttons
+
         # Set the layout for the main widget
         self.setLayout(self.mainlayout)
 
     def on_mqtt_clicked(self):
-        self.clearLayout(self.remaining_space_widget)
+        # Clear the layout
+        self.clearLayout(self.mainlayout)
 
         # Add new layout
-        mqtt=MQTT_Layout()
-        self.remaining_space_widget.addWidget(mqtt)
-        print('efwv')
+        new_layout = QVBoxLayout()
+        new_layout.addWidget(QLabel("MQTT Clicked"))
+        self.mainlayout.addLayout(new_layout)
 
+    def on_pdfview_clicked(self):
+        # Clear the layout
+        self.clearLayout(self.mainlayout)
 
+        # Add new layout
+        new_layout = QVBoxLayout()
+        new_layout.addWidget(QLabel("PDF Reader Clicked"))
+        self.mainlayout.addLayout(new_layout)
+
+    # ... do this for all your buttons
 
     def clearLayout(self, layout):
         while layout.count():
@@ -52,7 +57,6 @@ class MyWidget(QWidget):
             if child.widget():
                 child.widget().deleteLater()
 
-       
 if __name__ == "__main__":
     app = QApplication([])
     window = MyWidget()
