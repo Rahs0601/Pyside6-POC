@@ -7,7 +7,6 @@ connection_string = r"mssql+pyodbc://sa:pctadmin$1234@WIN10-TEST\SQLEXPRESS2019/
 # Create a SQLAlchemy engine
 engine = create_engine(connection_string)
 
-# Define your SQL query
 sql_query = 'SELECT * FROM MachineInformation'
 
 # Use pandas to read data from SQL into a DataFrame

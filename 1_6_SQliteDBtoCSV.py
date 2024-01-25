@@ -5,7 +5,6 @@ import pandas as pd
 db_path = "DB\DB_Sqlite_Raw_String.db"  # Replace with your SQLite database file path
 conn = sqlite3.connect(db_path)
 
-# Query to fetch data from the table (replace 'your_table' with the actual table name)
 query = 'SELECT * FROM TPM_Production_String'
 
 # Read data from SQLite database into a pandas DataFrame
