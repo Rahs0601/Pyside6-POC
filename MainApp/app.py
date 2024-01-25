@@ -88,7 +88,8 @@ class MyApp(QMainWindow):
         thread.start()
     
     def view_pdf(self):
-        PDFViewer.main()
+        # PDFViewer.main()
+        pass
     def view_excel_csv(self):
         # TODO: Implement Excel CSV viewing logic
         pass
