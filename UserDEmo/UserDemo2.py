@@ -41,7 +41,8 @@ class Ui_MainWindow(object):
 "font-size: 20px;\n"
 "margin:10px;\n"
 "padding:10px;\n"
-"border-radius:5px\n"
+"border-radius:5px;\n"
+"color:white;\n"
 "}\n"
 "\n"
 "#frame_3 QLabel{\n"
@@ -295,7 +296,7 @@ class Ui_MainWindow(object):
         self.label_5 = QLabel(self.frame_12)
         self.label_5.setObjectName(u"label_5")
         self.label_5.setFont(font2)
-        self.label_5.setAlignment(Qt.AlignHCenter|Qt.AlignTop)
+        self.label_5.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
 
         self.verticalLayout_8.addWidget(self.label_5)
 
@@ -458,7 +459,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(3)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
