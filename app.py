@@ -1,5 +1,5 @@
 import sys
-from PySide6.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QComboBox, QPushButton, QVBoxLayout, QGridLayout
+from PySide6.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QComboBox, QPushButton, QVBoxLayout, QGridLayout,
 from PySide6.QtCharts import QChart
 from PySide6.QtCore import Qt, QTimer, QThread
 import sqlite3
