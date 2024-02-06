@@ -437,6 +437,7 @@ class Ui_MainWindow(object):
         self.comboBox = QComboBox(self.frame_17)
         self.comboBox.setObjectName(u"comboBox")
         self.comboBox.setGeometry(QRect(160, 10, 121, 22))
+        self.comboBox.setFixedWidth(200)
         self.comboBox.setFont(font5)
         self.label_10 = QLabel(self.frame_17)
         self.label_10.setObjectName(u"label_10")
