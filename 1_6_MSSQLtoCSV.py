@@ -2,7 +2,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 # Set up your MSSQL connection parameters
-connection_string = r"mssql+pyodbc://sa:pctadmin$1234@WIN10-TEST\SQLEXPRESS2019/BASELINE?driver=ODBC Driver 17 for SQL Server"
+connection_string = r"mssql+pyodbc://sa:pctadmin$1234@WIN10-TEST\SQLEXPRESS2019/Highway?driver=ODBC Driver 17 for SQL Server"
 
 # Create a SQLAlchemy engine
 engine = create_engine(connection_string)
